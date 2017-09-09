@@ -3,7 +3,7 @@ package test;
 import java.io.IOException;
 import java.net.URL;
 
-import javax.enterprise.inject.spi.DeploymentException;
+import javax.enterprise.inject.spi.DefinitionException;
 import javax.enterprise.inject.spi.Extension;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
@@ -30,7 +30,7 @@ public class EndpointTest {
     private URL baseURL;
 
     @Deployment(testable=true)
-    @ShouldThrowException(DeploymentException.class)
+    @ShouldThrowException(DefinitionException.class)
     public static WebArchive createDeployment() throws IOException {
         //System.setProperty("swarm.resolver.offline", "true");
         //System.setProperty("swarm.debug.port", "8888");
