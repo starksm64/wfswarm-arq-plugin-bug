@@ -19,7 +19,7 @@ public class ExceptionTest extends Arquillian {
     @Deployment
     public static WebArchive deploy() {
         //System.setProperty("swarm.resolver.offline", "true");
-        System.setProperty("swarm.debug.port", "8888");
+        //System.setProperty("swarm.debug.port", "8888");
         JavaArchive testJar = ShrinkWrap
                 .create(JavaArchive.class, "exTest.jar")
                 .addClass(BadBean.class)
