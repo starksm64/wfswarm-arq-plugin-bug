@@ -1,0 +1,13 @@
+# Intellij files
+.idea
+*.iml
+*.ipr
+*.iws
+
+*.class
+.settings/
+.checkstyle
+.project
+.classpath
+.factorypath
+
