@@ -24,8 +24,9 @@
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <version.wildfly.swarm>2017.8.0</version.wildfly.swarm>
+        <version.wildfly.swarm>2017.9.5</version.wildfly.swarm>
         <version.arquillian>1.1.13.Final</version.arquillian>
+        <version.testng>6.10</version.testng>
     </properties>
 
     <dependencyManagement>
@@ -49,30 +50,42 @@
 
     <dependencies>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>${version.testng}</version>
+            <scope>test</scope>
         </dependency>
+
         <dependency>
-            <groupId>org.jboss.arquillian.junit</groupId>
-            <artifactId>arquillian-junit-container</artifactId>
+            <groupId>org.jboss.arquillian.testng</groupId>
+            <artifactId>arquillian-testng-container</artifactId>
             <version>${version.arquillian}</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>javax.enterprise</groupId>
             <artifactId>cdi-api</artifactId>
             <version>1.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.weld</groupId>
+            <artifactId>weld-core</artifactId>
+            <version>2.3.5.Final</version>
+            <scope>test</scope>
         </dependency>
         <!-- The JAX-RS client implemention -->
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
             <artifactId>resteasy-client</artifactId>
             <version>3.1.1.Final</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
             <artifactId>resteasy-json-p-provider</artifactId>
             <version>3.0.6.Final</version>
+            <scope>test</scope>
         </dependency>
 
         <dependency>
